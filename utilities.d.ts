@@ -1,13 +1,10 @@
-import { GridLayout } from 'ui/layouts/grid-layout';
-import { AbsoluteLayout } from 'ui/layouts/absolute-layout';
-import { View } from 'ui/core/view';
-import { StackLayout } from 'ui/layouts/stack-layout';
+import { AbsoluteLayout, GridLayout, StackLayout, View } from '@nativescript/core';
 import { Content, IMinimumHeights } from './nativescript-parallax';
 export declare class ParallaxUtilities {
     static setMinimumHeight(contentView: Content, anchoredRow: AbsoluteLayout, minHeight: number, includesAnchored: any): void;
     static getMinimumHeights(): IMinimumHeights;
     static addDropShadow(translateY: number, width: number): StackLayout;
-    private static shadowView(opacity, width);
+    private static shadowView;
     static fadeViews(topHeight: number, verticalOffset: number, viewsToFade: View[], topOpacity: any): void;
     static getAnchoredTopHeight(topHeight: number, verticalOffset: number): number;
     static getTopViewHeight(topHeight: number, verticalOffset: number): number;

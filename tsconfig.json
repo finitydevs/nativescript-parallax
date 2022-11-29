@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "target": "es6",
         "lib": [
             "es6",
             "dom"
@@ -12,8 +13,8 @@
         "declaration": true
     },
     "files": [
-      "demo/node_modules/tns-core-modules/tns-core-modules.d.ts",
       "nativescript-parallax.ts"
     ],
+    "exclude": ["node_modules"],
     "compileOnSave": false
 }

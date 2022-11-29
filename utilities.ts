@@ -1,15 +1,6 @@
-import * as app from 'application';
-import * as Platform from 'platform';
-import { ScrollView, ScrollEventData } from 'ui/scroll-view';
-import { GridLayout, ItemSpec, GridUnitType } from 'ui/layouts/grid-layout';
-import { AbsoluteLayout } from 'ui/layouts/absolute-layout';
-import { View, AddChildFromBuilder } from 'ui/core/view';
-import { Label } from 'ui/label';
-import { ListView } from 'ui/list-view';
-import { StackLayout } from 'ui/layouts/stack-layout';
-import { Color } from 'color';
-import { ParallaxView, Header, Content, Anchored, IMinimumHeights } from './nativescript-parallax';
-import { SwipeDirection, GestureEventData, SwipeGestureEventData, PanGestureEventData } from 'ui/gestures';
+import * as Platform from '@nativescript/core/platform';
+import { AbsoluteLayout, GridLayout, StackLayout, View, Application as app, Color, Label } from '@nativescript/core';
+import { Content, IMinimumHeights } from './nativescript-parallax';
 
 
 export class ParallaxUtilities {
@@ -22,8 +13,8 @@ export class ParallaxUtilities {
 	}
 
 	public static getMinimumHeights(): IMinimumHeights {
-		let height1 = Platform.screen.mainScreen.heightDIPs;
-		let height2 = Platform.screen.mainScreen.widthDIPs;
+		let height1 = Platform.Screen.mainScreen.heightDIPs;
+		let height2 = Platform.Screen.mainScreen.widthDIPs;
 		//if the first hieght is lager than the second hiehgt it's the portrait views min hieght.
 		if (height1 > height2) {
 			return {

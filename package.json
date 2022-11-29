@@ -3,15 +3,6 @@
   "version": "1.4.0",
   "description": "NativeScript Parallax View Plugin.",
   "main": "nativescript-parallax.js",
-  "nativescript": {
-    "platforms": {
-      "android": "3.1.0",
-      "ios": "3.1.0"
-    },
-    "tns-ios": {
-      "version": "3.1.0"
-    }
-  },
   "scripts": {
     "build": "tsc",
     "demo.ios": "npm run preparedemo &&  cd demo &&  tns run ios",
@@ -40,8 +31,14 @@
   "license": "MIT",
   "homepage": "https://github.com/TheOriginalJosh/nativescript-parallax",
   "readmeFilename": "README.md",
-  "devDependencies": {
-    "typescript": "^2.5.3"
+  "peerDependencies": {
+    "@nativescript/core": "~8.3.0"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "@nativescript/android": "8.3.1",
+    "@nativescript/core": "~8.3.0",
+    "@nativescript/ios": "8.3.3",
+    "@nativescript/webpack": "~5.0.9",
+    "typescript": "~4.5.5"
+  }
 }

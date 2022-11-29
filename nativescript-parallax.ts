@@ -1,12 +1,6 @@
-import * as app from 'application';
-import * as Platform from 'platform';
-import { ScrollView, ScrollEventData } from 'ui/scroll-view';
-import { GridLayout, ItemSpec, GridUnitType } from 'ui/layouts/grid-layout';
-import { AbsoluteLayout } from 'ui/layouts/absolute-layout';
-import { View, AddChildFromBuilder } from 'ui/core/view';
-import { Label } from 'ui/label';
-import { StackLayout } from 'ui/layouts/stack-layout';
-import { Color } from 'color';
+import * as Platform from '@nativescript/core/platform';
+
+import { AbsoluteLayout, GridLayout, GridUnitType, ItemSpec, ScrollEventData, ScrollView, StackLayout, View, Application as app, OrientationChangedEventData } from '@nativescript/core';
 import { ParallaxUtilities } from './utilities';
 
 export class Header extends StackLayout {
@@ -68,14 +62,6 @@ export class ParallaxView extends GridLayout {
 
 	get isAnchored() {
 		return this._isAnchored;
-	}
-
-	get android(): any {
-		return;
-	}
-
-	get ios(): any {
-		return;
 	}
 
 	constructor() {
@@ -201,8 +187,8 @@ export class ParallaxView extends GridLayout {
 
 				let prevOffset = -10;
 				//set the min height on load
-				ParallaxUtilities.setMinimumHeight(contentView, anchoredRow, Platform.screen.mainScreen.heightDIPs, this._includesAnchored);
-				app.on(app.orientationChangedEvent, (args: app.OrientationChangedEventData) => {
+				ParallaxUtilities.setMinimumHeight(contentView, anchoredRow, Platform.Screen.mainScreen.heightDIPs, this._includesAnchored);
+				app.on(app.orientationChangedEvent, (args: OrientationChangedEventData) => {
 					//sets the content view to have a min height so that scroll always allows full coverage of header, with or without anchor.
 					ParallaxUtilities.setMinimumHeight(contentView, anchoredRow, this._minimumHeights[args.newValue], this._includesAnchored);
 				});

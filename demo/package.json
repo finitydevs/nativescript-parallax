@@ -1,24 +1,18 @@
 {
-  "nativescript": {
-    "id": "org.nativescript.demo",
-    "tns-ios": {
-      "version": "3.1.0"
-    },
-    "tns-android": {
-      "version": "3.2.0"
-    }
-  },
+  "name": "parralax-demo",
+  "main": "app/app.ts",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "nativescript-parallax": "file:../",
-    "tns-core-modules": "^3.3.0"
+    "@nativescript/core": "~8.3.0",
+    "@nativescript/theme": "~3.0.2"
   },
   "devDependencies": {
-    "babel-traverse": "6.8.0",
-    "babel-types": "6.8.1",
-    "babylon": "6.8.0",
-    "filewalker": "0.1.2",
-    "lazy": "1.0.11",
-    "nativescript-dev-typescript": "^0.3.7",
-    "typescript": "^2.4.0"
+    "@nativescript/android": "8.3.1",
+    "@nativescript/ios": "8.3.3",
+    "@nativescript/types": "~8.3.0",
+    "@nativescript/webpack": "~5.0.9",
+    "typescript": "~4.5.5"
   }
 }

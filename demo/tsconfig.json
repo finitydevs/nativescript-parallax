@@ -1,23 +1,22 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "experimentalDecorators": true,
-        "noEmitHelpers": true,
-        "lib": [
-            "es6",
-            "dom"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "./node_modules/tns-core-modules/*",
-                "./node_modules/*"
-            ]
-        }
+      "module": "esnext",
+      "target": "es2017",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "noEmitHelpers": true,
+      "noEmitOnError": true,
+      "skipLibCheck": true,
+      "lib": ["es2017", "dom"],
+      "baseUrl": ".",
+      "paths": {
+        "~/*": ["app/*"],
+        "@/*": ["app/*"]
+      }
     },
-    "exclude": [
-        "node_modules",
-        "platforms"
-    ]
-}
+    "include": ["app/**/*"],
+    "files": ["./references.d.ts"],
+    "exclude": ["node_modules", "platforms"]
+  }
+  

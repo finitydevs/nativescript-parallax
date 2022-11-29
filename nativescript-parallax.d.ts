@@ -1,10 +1,10 @@
-import { GridLayout } from 'ui/layouts/grid-layout';
-import { StackLayout } from 'ui/layouts/stack-layout';
+import { GridLayout, StackLayout } from '@nativescript/core';
 export declare class Header extends StackLayout {
 }
 export declare class Anchored extends StackLayout {
     private _dropShadow;
-    dropShadow: boolean;
+    get dropShadow(): boolean;
+    set dropShadow(value: boolean);
     constructor();
 }
 export declare class Content extends StackLayout {
@@ -25,10 +25,10 @@ export declare class ParallaxView extends GridLayout {
     static scrollEvent: string;
     static anchoredEvent: string;
     static unanchoredEvent: string;
-    bounce: boolean;
-    controlsToFade: string;
-    readonly isAnchored: boolean;
-    readonly android: any;
-    readonly ios: any;
+    get bounce(): boolean;
+    set bounce(value: boolean);
+    get controlsToFade(): string;
+    set controlsToFade(value: string);
+    get isAnchored(): boolean;
     constructor();
 }

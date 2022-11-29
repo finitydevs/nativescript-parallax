@@ -2,7 +2,7 @@
 	 xmlns:parallax="nativescript-parallax"
 	loaded="pageLoaded">
   	<parallax:ParallaxView bounce="false" controlsToFade="headerLabel,headerLabel2" scroll="onScroll" anchored="onAnchored" unanchored="onUnAnchored">
-		<parallax:Header class="header-template" height="300">
+		<parallax:Header class="header-template" height="200">
 			<Label id="headerLabel" text="Parallax"></Label>
 			<Label id="headerLabel2" text="Header Component"></Label>
 		</parallax:Header>

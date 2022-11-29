@@ -1,10 +1,8 @@
-import * as observable from 'data/observable';
-import { ScrollView, ScrollEventData } from 'ui/scroll-view';
-import * as pages from 'ui/page';
+import { EventData, Page, ScrollEventData } from "@nativescript/core";
 
 // Event handler for Page "loaded" event attached in main-page.xml
-export function pageLoaded(args: observable.EventData) {
-	let page = <pages.Page>args.object;
+export function pageLoaded(args: EventData) {
+	let page = <Page>args.object;
 	page.actionBarHidden = true;
 }
 

@@ -8,9 +8,6 @@ export interface AnchoredAttributes extends StackLayoutAttributes {
 export interface ParllaxViewAttibutes extends GridLayoutAttributes {
     bounce?: boolean
     controlsToFade?: string
-    scroll?: () => void
-    anchored?: () => void
-    unanchored?: () => void
 }
 
 declare global {

@@ -6,9 +6,6 @@ export interface AnchoredAttributes extends StackLayoutAttributes {
 export interface ParllaxViewAttibutes extends GridLayoutAttributes {
     bounce?: boolean;
     controlsToFade?: string;
-    scroll?: () => {};
-    anchored?: () => {};
-    unanchored?: () => {};
 }
 declare global {
     module JSX {

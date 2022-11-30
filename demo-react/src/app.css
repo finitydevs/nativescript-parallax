@@ -1,19 +1,51 @@
-/**
- * Place any CSS rules you want to apply on both iOS and Android here.
- * This is where the vast majority of your CSS code goes.
- * Font icon class
- */
-.fab {
-  font-family: 'Font Awesome 5 Brands', 'fa-brands-400';
-  font-weight: 400;
+ParallaxView{
+	margin-top: -20;
 }
 
-.fas {
-  font-family: 'Font Awesome 5 Free', 'fa-solid-900';
-  font-weight: 900;
+#headerLabel2
+{
+	font-size: 20;
+	horizontal-align: center;
+	color:#B2EBF2;
+	margin-top: 20;
+}
+#headerLabel{
+	font-size: 40;
+	horizontal-align: center;
+	color:#B2EBF2;
+	margin-top: 20;
+}
+.header-template{
+	background-color:#212121;
+	background-image:url('~/assets/mountains.png');
+	background-size: cover;
+	background-position: center center;
+	height: 200;
+}
+.body-template{
+	font-size:20;
+	padding:15;
+}
+.anchor{
+	height: 70;
+	width:100%;
+	background-color:#1770de;
 }
 
-.far {
-  font-family: 'Font Awesome 5 Free', 'fa-regular-400';
-  font-weight: 400;
+.anchor Label{
+	vertical-align: center;
+}
+
+.header{
+	font-size: 25;
+	color: #a0a0a0;
+	margin-bottom: 20;
+	margin-top: 5;
+}
+
+#titleLabel{
+	font-weight:bold;
+	font-size:25;
+	padding:5 15;
+	color:#fff;
 }

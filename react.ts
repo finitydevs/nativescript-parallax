@@ -1,16 +1,16 @@
 import { registerElement, NativeScriptProps, StackLayoutAttributes, GridLayoutAttributes } from 'react-nativescript';
 import { StackLayout, GridLayout } from '@nativescript/core';
 
-export interface AnchoredAttributes extends StackLayoutAttributes  {
+export interface AnchoredAttributes extends StackLayoutAttributes {
     dropShadow?: boolean
 }
 
 export interface ParllaxViewAttibutes extends GridLayoutAttributes {
     bounce?: boolean
     controlsToFade?: string
-    scroll?: () => {}
-    anchored?: () => {}
-    unanchored?: () => {}
+    scroll?: () => void
+    anchored?: () => void
+    unanchored?: () => void
 }
 
 declare global {
@@ -25,7 +25,12 @@ declare global {
 }
 
 export const registerParallax = () => {
-    registerElement('parallaxView', require('nativescript-parallax').ParallaxView)
-    registerElement('parallaxHeader', require('nativescript-parallax').Header)
-    registerElement('parallaxContent', require('nativescript-parallax').Content)
+    // @ts-ignore
+    registerElement('parallaxView', () => new require('nativescript-parallax').ParallaxView)
+    // @ts-ignore
+    registerElement('parallaxAnchored', () => new require('nativescript-parallax').Anchored)
+    // @ts-ignore
+    registerElement('parallaxContent', () => new require('nativescript-parallax').Content)
+    // @ts-ignore
+    registerElement('parallaxHeader', () => new require('nativescript-parallax').Header)
 }

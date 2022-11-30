@@ -4,7 +4,9 @@ import { AbsoluteLayout, GridLayout, GridUnitType, ItemSpec, ScrollEventData, Sc
 import { ParallaxUtilities } from './utilities';
 
 export class Header extends StackLayout {
-
+	constructor() {
+		super();
+	}
 }
 export class Anchored extends StackLayout {
 	private _dropShadow: boolean;
@@ -22,7 +24,9 @@ export class Anchored extends StackLayout {
 }
 
 export class Content extends StackLayout {
-
+	constructor() {
+		super();
+	}
 }
 
 export interface IMinimumHeights {

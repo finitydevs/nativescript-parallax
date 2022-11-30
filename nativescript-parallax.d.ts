@@ -1,5 +1,6 @@
 import { GridLayout, StackLayout } from '@nativescript/core';
 export declare class Header extends StackLayout {
+    constructor();
 }
 export declare class Anchored extends StackLayout {
     private _dropShadow;
@@ -8,6 +9,7 @@ export declare class Anchored extends StackLayout {
     constructor();
 }
 export declare class Content extends StackLayout {
+    constructor();
 }
 export interface IMinimumHeights {
     portrait: number;

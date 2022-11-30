@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": [
+      "es6",
+      "dom",
+      "es2018"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+      "*": [
+        "./node_modules/@nativescript/*",
+        "./node_modules/*"
+      ]
+    },
+    "removeComments": true
+  },
+  "exclude": [
+    "node_modules",
+    "platforms"
+  ]
+}

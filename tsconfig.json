@@ -1,20 +1,33 @@
 {
     "compilerOptions": {
-        "target": "es6",
-        "lib": [
-            "es6",
-            "dom"
-        ],
-        "module": "commonjs",
-        "removeComments": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
-        "noEmitOnError": false,
-        "declaration": true
+      "target": "es2017",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "declaration": true,
+      "removeComments": true,
+      "noLib": false,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "lib": ["es2017", "dom"],
+      "sourceMap": true,
+      "pretty": true,
+      "allowUnreachableCode": false,
+      "allowUnusedLabels": false,
+      "noEmitHelpers": true,
+      "noEmitOnError": false,
+      "noImplicitAny": false,
+      "noImplicitReturns": true,
+      "noImplicitUseStrict": false,
+      "noFallthroughCasesInSwitch": true,
+      "rootDir": ".",
+      "baseUrl": "."
     },
     "files": [
-      "nativescript-parallax.ts"
+        "nativescript-parallax.ts",
+        "react.ts",
+        "utilities.ts"
     ],
     "exclude": ["node_modules"],
     "compileOnSave": false
-}
+  }
